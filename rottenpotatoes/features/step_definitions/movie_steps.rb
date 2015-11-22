@@ -30,7 +30,7 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   #   iterate over the ratings and reuse the "When I check..." or
   #   "When I uncheck..." steps in lines 89-95 of web_steps.rb
   
-  rating_list.split(', ').each { |rating| steps %Q{When I #{uncheck}check "ratings_#{rating}"} }
+  rating_list.split(', ').each { |rating| step %Q{I #{uncheck}check "ratings_#{rating}"} }
   #fail "Unimplemented"
 end
 
